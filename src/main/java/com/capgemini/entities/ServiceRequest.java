@@ -20,9 +20,11 @@ public class ServiceRequest {
 	public double price;
 	public String status;
 	public int mechanics_Id;
+	
 	@Column(nullable = false)
 	public boolean is_deleted = false;
 	public String create_Date_Time;
 	public String update_Date_Time;
+	
 
 }
