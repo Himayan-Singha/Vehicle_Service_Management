@@ -13,13 +13,13 @@ import lombok.Data;
 public class ServiceRequest {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	public int service_Req_No;
-	public int service_Id;
-	public int vehicle_Reg_No;
-	public String date;
-	public double price;
-	public String status;
-	public int mechanics_Id;
+	public int service_Req_No; //auto-generated
+	public int service_Id; //mapped from Service Catalog
+	public int vehicle_Reg_No; //mapped from Vehicle
+	public String date; //add in controller
+	public double price; //add in controller
+	public String status; //add in controller
+	public int mechanics_Id; //mapped from Mechanics
 	
 	@Column(nullable = false)
 	public boolean is_deleted = false;
