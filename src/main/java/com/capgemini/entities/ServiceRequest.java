@@ -26,5 +26,4 @@ public class ServiceRequest {
 	public String create_Date_Time;
 	public String update_Date_Time;
 	
-
 }
