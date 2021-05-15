@@ -1,7 +1,5 @@
 package com.capgemini.entities;
 
-import java.time.LocalDateTime;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,6 +11,9 @@ import lombok.Data;
 @Entity
 @Data
 public class ServiceRequest {
+	
+	//DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public int service_Req_No; //auto-generated
@@ -21,12 +22,15 @@ public class ServiceRequest {
 	public double price; //add in controller
 	public String status; //add in controller
 	public int mechanics_Id; //mapped from Mechanics
-	public LocalDateTime date = java.time.LocalDateTime.now();; //add in controller
+	//public String date = java.time.LocalDateTime.now().format(formatter); //add in controller
+	public String date = ""; //add in controller
 	
 	@Column(nullable = false)
 	public boolean isDeleted = false;
-	public LocalDateTime create_Date_Time = java.time.LocalDateTime.now();
-	public LocalDateTime update_Date_Time = java.time.LocalDateTime.now();
+//	public LocalDateTime create_Date_Time = java.time.LocalDateTime.now();
+//	public LocalDateTime update_Date_Time = java.time.LocalDateTime.now();
 	
+	public String create_Date_Time = "";
+	public String update_Date_Time = "";
 
 }
