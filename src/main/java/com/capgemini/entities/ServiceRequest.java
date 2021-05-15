@@ -13,8 +13,8 @@ import lombok.Data;
 public class ServiceRequest {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	public int service_Id;
 	public int service_Req_No;
+	public int service_Id;
 	public int vehicle_Reg_No;
 	public String date;
 	public double price;
