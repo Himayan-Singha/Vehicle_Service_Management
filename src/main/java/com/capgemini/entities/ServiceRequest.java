@@ -25,9 +25,5 @@ public class ServiceRequest {
 	public boolean is_deleted = false;
 	public String create_Date_Time;
 	public String update_Date_Time;
-	
-<<<<<<< HEAD
 
-=======
->>>>>>> 36c1a3f86a1899d2a153a474748c80a151e1f41e
 }
