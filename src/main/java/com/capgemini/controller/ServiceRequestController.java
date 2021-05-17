@@ -34,11 +34,10 @@ public class ServiceRequestController {
 	@GetMapping("/{id}")
 	public ServiceRequest getServiceRequestsById(@PathVariable int id){
 		ServiceRequest dbServiceRequest = serviceRequestRepository.findById(id).get();
-		if(dbServiceRequest.isDeleted == true) {
-			System.out.println("Service Request is deleted");
-			System.exit(1); 		//replace with error handling
+		if(dbServiceRequest.isDeleted == false) {
+			return dbServiceRequest;
 		}
-		return dbServiceRequest;
+		return null;
 	}
 	
 	// http://localhost:8080/api/ServiceRequest/
